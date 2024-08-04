@@ -21,12 +21,8 @@ database.connect(); // Connect to the database
 
 app.use(express.json()); // Middleware to parse JSON requests
 app.use(cookieParser()); // Middleware to parse cookies
-app.use(
-  cors({
-    origin: "https://frontend-studynotion.onrender.com/", // Allow requests from this origin
-    credentials: true, // Enable credentials (cookies, authorization headers)
-  })
-);
+app.use(cors());
+
 
 app.use(
   fileUpload({
